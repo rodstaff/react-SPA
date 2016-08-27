@@ -1,7 +1,7 @@
-// var webpack = require('webpack');
+var webpack = require('webpack');
 module.exports = {
 
-  entry: './src/',  // <== this equivalent to './src/index.js' since entry point will be looking for default [index] file'
+  entry: './vendor/client.js',  
   module: {
   	loaders: [
       {
@@ -9,17 +9,18 @@ module.exports = {
       	exclude: /node_modules/,
         loader:  'babel-loader',
         query: {
-          presets: ['react', 'es2015', 'stage-0']
-        //   plugins: 'react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
+          presets: ['react', 'es2015', 'stage-0'],
+          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
         }
       }
   	]
   },
   devtool:  'inline-source-map',
-  // plugins: [
-  //   new webpack.HotModuleReplacementPlugin(),
-  //   new webpack.NoErrorsPlugin()
-  // ],
+  plugins: [
+  new webpack.optimize.DedupePlugin(),
+  new webpack.optimize.OccurrenceOrderPlugin()
+  //new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+  ],
   devServer: {
   	publicPath: '/',   
   	filename: 'bundle.js',  // located here => 'localhost:<port>/bundle.js'

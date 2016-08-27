@@ -2,9 +2,9 @@
   "name": "react-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/",
+  "main": "./vendor/client.js",
   "scripts": {
-    "dev": "webpack-dev-server --progress --colors --inline --hot"
+    "dev": "webpack-dev-server --progress --colors --hot --inline"
   },
   "author": "rodk",
   "license": "ISC",
