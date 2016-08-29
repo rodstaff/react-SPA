@@ -25,6 +25,6 @@ module.exports = {
   	publicPath: '/',   
   	filename: 'bundle.js',  // located here => 'localhost:<port>/bundle.js'
   	host: '0.0.0.0',
-  	port: 8087
+  	port: 8088
   }
 }

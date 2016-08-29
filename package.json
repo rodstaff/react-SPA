@@ -2,8 +2,9 @@
   "name": "react-SPA",
   "version": "1.0.0",
   "description": "",
-  "main": "./vendor/client.js",
+  "main": "",
   "scripts": {
+    "go": "webpack-dev-server",
     "dev": "webpack-dev-server --progress --colors --hot --inline"
   },
   "author": "rodk",
