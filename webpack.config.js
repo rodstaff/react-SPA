@@ -1,12 +1,12 @@
 var webpack = require('webpack');
 module.exports = {
 
-  entry: './vendor/client.js',  
+  entry: './jsrc/',  
   module: {
   	loaders: [
       {
       	test: /\.js$/,
-      	exclude: /node_modules/,
+      	exclude: /(node_modules|bower_components)/,
         loader:  'babel-loader',
         query: {
           presets: ['react', 'es2015', 'stage-0'],

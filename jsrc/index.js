@@ -13,8 +13,8 @@ ReactDOM.render(
     <Route path="/" component={Layout}>
       <IndexRoute component={Featured}></IndexRoute>
         <Route path="archives(/:article)" component={Archives}></Route>
-        <Route path="settings" component={Settings}></Route>
+        <Route path="settings(/:tools)" component={Settings}></Route>
     </Route>
   </Router>,
-  document.getElementById('theOne'));
+document.getElementById('theOne'));
   
