@@ -1,7 +1,11 @@
 var webpack = require('webpack');
 module.exports = {
 
-  entry: './jsrc/',  
+  entry: './jsrc/', 
+  output: {
+        path: './bsrc',
+        filename: 'bundle.js'  //react-articles/bsrc/bundle.js when running 'webpack'
+    }, 
   module: {
   	loaders: [
       {
@@ -22,8 +26,8 @@ module.exports = {
   //new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
   ],
   devServer: {
-  	publicPath: '/',   
-  	filename: 'bundle.js',  // located here => 'localhost:<port>/bundle.js'
+  	publicPath: '/bsrc',    
+  	filename: 'bundle.js',  //localhost:8088/webpack-dev-server/bsrcbundle.js
   	host: '0.0.0.0',
   	port: 8088
   }
