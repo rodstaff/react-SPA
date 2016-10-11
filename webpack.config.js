@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 module.exports = {
 
-  entry: './jsrc/', 
+  entry: './jsrc', 
   output: {
         path: './bsrc',
         filename: 'bundle.js'  //react-articles/bsrc/bundle.js when running 'webpack'

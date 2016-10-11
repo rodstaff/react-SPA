@@ -9,7 +9,7 @@ import Settings from '../pages/settings';
 
 
 ReactDOM.render(
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path="/" component={Layout}>
       <IndexRoute component={Featured}></IndexRoute>
         <Route path="archives(/:article)" component={Archives}></Route>
