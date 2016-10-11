@@ -36,10 +36,10 @@ export default class Nnav extends React.Component {
               <li class={featuredClass}>
                 <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Featured</IndexLink>
               </li>
-              <li> class={archiveClass}>
+              <li class={archiveClass}>
                 <Link to="archives" onClick={this.toggleCollapse.bind(this)}>Archives</Link>
               </li>
-              <li> class={settingsClass}>
+              <li class={settingsClass}>
                 <Link to="settings" onClick={this.toggleCollapse.bind(this)}>Settings</Link>
               </li>
             </ul>
